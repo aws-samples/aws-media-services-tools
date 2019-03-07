@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<live_event href="/live_events/45" product="Elemental Live + Audio Normalization Package + Audio Decode Package + Audio Package + Cable Package + HEVC Package + Statmux Package + Motion Image Inserter Package + AVC-I + HEVC 4:2:2 Package + Nielsen RTVOD Watermark Package" version="2.12.3.303406">
+  <name>...2017_Replay1_UHD_rev1_20180313T183953_h264_10Mb_1080p.mp4</name>
+  <input>
+    <deblock_selected>true</deblock_selected>
+    <denoise_selected>false</denoise_selected>
+    <error_clear_time nil="true"/>
+    <failback_rule>immediately</failback_rule>
+    <filter_enable>Auto</filter_enable>
+    <filter_strength>1</filter_strength>
+    <hot_backup_pair>false</hot_backup_pair>
+    <input_label></input_label>
+    <loop_source>false</loop_source>
+    <no_psi>false</no_psi>
+    <order>1</order>
+    <service_name nil="true"/>
+    <service_provider_name nil="true"/>
+    <timecode_source>embedded</timecode_source>
+    <file_input>
+      <check_server_certificate>true</check_server_certificate>
+      <uri>/data/server/video/RoseParade2017_Replay1_UHD_rev1_20180313T183953_h264_10Mb_1080p.mp4</uri>
+    </file_input>
+    <name>input_1</name>
+    <video_selector>
+      <color_space>follow</color_space>
+      <order>1</order>
+      <program_id nil="true"/>
+      <name>input_1_video_selector_0</name>
+    </video_selector>
+    <audio_selector>
+      <default_selection>true</default_selection>
+      <order>1</order>
+      <program_selection>1</program_selection>
+      <selector_type></selector_type>
+      <unwrap_smpte337>true</unwrap_smpte337>
+      <name>input_1_audio_selector_0</name>
+    </audio_selector>
+  </input>
+  <loop_all_inputs>false</loop_all_inputs>
+  <timecode_config>
+    <require_initial_timecode>false</require_initial_timecode>
+    <source>embedded</source>
+    <sync_threshold nil="true"/>
+  </timecode_config>
+  <failure_rule>
+    <priority>50</priority>
+    <restart_on_failure>false</restart_on_failure>
+  </failure_rule>
+  <input_loss_behavior>
+    <black_frame_msec>10000</black_frame_msec>
+    <input_loss_image_color>000000</input_loss_image_color>
+    <input_loss_image_type>color</input_loss_image_type>
+    <repeat_frame_msec>1000</repeat_frame_msec>
+  </input_loss_behavior>
+  <ad_trigger>scte35_splice_insert</ad_trigger>
+  <ad_avail_offset>0</ad_avail_offset>
+  <ignore_web_delivery_allowed_flag>false</ignore_web_delivery_allowed_flag>
+  <ignore_no_regional_blackout_flag>false</ignore_no_regional_blackout_flag>
+  <low_latency_mode>false</low_latency_mode>
+  <initial_audio_gain>0</initial_audio_gain>
+  <avsync_enable>true</avsync_enable>
+  <avsync_pad_trim_audio>true</avsync_pad_trim_audio>
+  <user_data></user_data>
+  <input_end_action>switch_input</input_end_action>
+  <output_timing_source>input_clock</output_timing_source>
+  <input_buffer_size>60</input_buffer_size>
+  <resource_reservation>none</resource_reservation>
+  <low_framerate_input>false</low_framerate_input>
+  <extract_sdt>false</extract_sdt>
+  <stream_assembly>
+    <name>stream_assembly_0</name>
+    <video_description>
+      <afd_signaling>None</afd_signaling>
+      <anti_alias>true</anti_alias>
+      <drop_frame_timecode>true</drop_frame_timecode>
+      <fixed_afd nil="true"/>
+      <force_cpu_encode>false</force_cpu_encode>
+      <height>1080</height>
+      <insert_color_metadata>true</insert_color_metadata>
+      <respond_to_afd>None</respond_to_afd>
+      <sharpness>50</sharpness>
+      <stretch_to_output>false</stretch_to_output>
+      <timecode_passthrough>false</timecode_passthrough>
+      <vbi_passthrough>false</vbi_passthrough>
+      <width>1920</width>
+      <h264_settings>
+        <adaptive_quantization>medium</adaptive_quantization>
+        <bitrate>4500000</bitrate>
+        <buf_fill_pct nil="true"/>
+        <buf_size>9000000</buf_size>
+        <cabac>true</cabac>
+        <dynamic_sub_gop>false</dynamic_sub_gop>
+        <flicker_aq>false</flicker_aq>
+        <force_field_pictures>false</force_field_pictures>
+        <framerate_denominator>1</framerate_denominator>
+        <framerate_follow_source>false</framerate_follow_source>
+        <framerate_numerator>30</framerate_numerator>
+        <gop_b_reference>false</gop_b_reference>
+        <gop_closed_cadence>1</gop_closed_cadence>
+        <gop_markers>false</gop_markers>
+        <gop_num_b_frames>2</gop_num_b_frames>
+        <gop_size>60.0</gop_size>
+        <gop_size_units>frames</gop_size_units>
+        <interpolate_frc>false</interpolate_frc>
+        <look_ahead_rate_control>medium</look_ahead_rate_control>
+        <max_bitrate nil="true"/>
+        <max_qp nil="true"/>
+        <min_bitrate nil="true"/>
+        <min_buf_occ>0</min_buf_occ>
+        <min_i_interval>0</min_i_interval>
+        <min_qp nil="true"/>
+        <motion_vector_direct_mode nil="true"/>
+        <num_ref_frames>1</num_ref_frames>
+        <par_denominator>1</par_denominator>
+        <par_follow_source>false</par_follow_source>
+        <par_numerator>1</par_numerator>
+        <passes>1</passes>
+        <progressive_references>false</progressive_references>
+        <qp nil="true"/>
+        <quality_level nil="true"/>
+        <repeat_pps>false</repeat_pps>
+        <rp2027_syntax>false</rp2027_syntax>
+        <scd>true</scd>
+        <sei_timecode>false</sei_timecode>
+        <slices>4</slices>
+        <slow_pal>false</slow_pal>
+        <softness nil="true"/>
+        <spatial_aq>true</spatial_aq>
+        <svq>0</svq>
+        <telecine>None</telecine>
+        <temporal_aq>false</temporal_aq>
+        <level>4.1</level>
+        <profile>Main</profile>
+        <rate_control_mode>CBR</rate_control_mode>
+        <interlace_mode>progressive</interlace_mode>
+      </h264_settings>
+      <selected_gpu nil="true"/>
+      <codec>h.264</codec>
+      <video_preprocessors>
+        <deinterlacer>
+          <algorithm>interpolate</algorithm>
+          <deinterlace_mode>Deinterlace</deinterlace_mode>
+          <force>false</force>
+        </deinterlacer>
+      </video_preprocessors>
+    </video_description>
+    <audio_description>
+      <audio_type>0</audio_type>
+      <follow_input_audio_type>true</follow_input_audio_type>
+      <follow_input_language_code>true</follow_input_language_code>
+      <language_code nil="true"/>
+      <nielsen_rtvod_watermark></nielsen_rtvod_watermark>
+      <order>1</order>
+      <stream_name nil="true"/>
+      <timecode_passthrough>false</timecode_passthrough>
+      <aac_settings>
+        <ad_broadcaster_mix>false</ad_broadcaster_mix>
+        <bitrate>128000</bitrate>
+        <coding_mode>2_0</coding_mode>
+        <latm_loas>false</latm_loas>
+        <mpeg2>false</mpeg2>
+        <sample_rate>44100</sample_rate>
+        <profile>LC</profile>
+        <rate_control_mode>CBR</rate_control_mode>
+      </aac_settings>
+      <codec>aac</codec>
+      <audio_source_name>Audio Selector 1</audio_source_name>
+    </audio_description>
+  </stream_assembly>
+  <stream_assembly>
+    <name>stream_assembly_1</name>
+    <video_description>
+      <afd_signaling>None</afd_signaling>
+      <anti_alias>true</anti_alias>
+      <drop_frame_timecode>true</drop_frame_timecode>
+      <fixed_afd nil="true"/>
+      <force_cpu_encode>false</force_cpu_encode>
+      <height>1080</height>
+      <insert_color_metadata>true</insert_color_metadata>
+      <respond_to_afd>None</respond_to_afd>
+      <sharpness>50</sharpness>
+      <stretch_to_output>false</stretch_to_output>
+      <timecode_passthrough>false</timecode_passthrough>
+      <vbi_passthrough>false</vbi_passthrough>
+      <width>1920</width>
+      <h264_settings>
+        <adaptive_quantization>medium</adaptive_quantization>
+        <bitrate>4500000</bitrate>
+        <buf_fill_pct nil="true"/>
+        <buf_size>9000000</buf_size>
+        <cabac>true</cabac>
+        <dynamic_sub_gop>false</dynamic_sub_gop>
+        <flicker_aq>false</flicker_aq>
+        <force_field_pictures>false</force_field_pictures>
+        <framerate_denominator>1</framerate_denominator>
+        <framerate_follow_source>false</framerate_follow_source>
+        <framerate_numerator>30</framerate_numerator>
+        <gop_b_reference>false</gop_b_reference>
+        <gop_closed_cadence>1</gop_closed_cadence>
+        <gop_markers>false</gop_markers>
+        <gop_num_b_frames>2</gop_num_b_frames>
+        <gop_size>60.0</gop_size>
+        <gop_size_units>frames</gop_size_units>
+        <interpolate_frc>false</interpolate_frc>
+        <look_ahead_rate_control>medium</look_ahead_rate_control>
+        <max_bitrate nil="true"/>
+        <max_qp nil="true"/>
+        <min_bitrate nil="true"/>
+        <min_buf_occ>0</min_buf_occ>
+        <min_i_interval>0</min_i_interval>
+        <min_qp nil="true"/>
+        <motion_vector_direct_mode nil="true"/>
+        <num_ref_frames>1</num_ref_frames>
+        <par_denominator>1</par_denominator>
+        <par_follow_source>false</par_follow_source>
+        <par_numerator>1</par_numerator>
+        <passes>1</passes>
+        <progressive_references>false</progressive_references>
+        <qp nil="true"/>
+        <quality_level nil="true"/>
+        <repeat_pps>false</repeat_pps>
+        <rp2027_syntax>false</rp2027_syntax>
+        <scd>true</scd>
+        <sei_timecode>false</sei_timecode>
+        <slices>4</slices>
+        <slow_pal>false</slow_pal>
+        <softness nil="true"/>
+        <spatial_aq>true</spatial_aq>
+        <svq>0</svq>
+        <telecine>None</telecine>
+        <temporal_aq>false</temporal_aq>
+        <level>4.1</level>
+        <profile>Main</profile>
+        <rate_control_mode>CBR</rate_control_mode>
+        <interlace_mode>progressive</interlace_mode>
+      </h264_settings>
+      <selected_gpu nil="true"/>
+      <codec>h.264</codec>
+      <video_preprocessors>
+        <deinterlacer>
+          <algorithm>interpolate</algorithm>
+          <deinterlace_mode>Deinterlace</deinterlace_mode>
+          <force>false</force>
+        </deinterlacer>
+      </video_preprocessors>
+    </video_description>
+    <audio_description>
+      <audio_type>0</audio_type>
+      <follow_input_audio_type>true</follow_input_audio_type>
+      <follow_input_language_code>true</follow_input_language_code>
+      <language_code nil="true"/>
+      <nielsen_rtvod_watermark nil="true"/>
+      <order>1</order>
+      <stream_name nil="true"/>
+      <timecode_passthrough>false</timecode_passthrough>
+      <aac_settings>
+        <ad_broadcaster_mix>false</ad_broadcaster_mix>
+        <bitrate>128000</bitrate>
+        <coding_mode>2_0</coding_mode>
+        <latm_loas>false</latm_loas>
+        <mpeg2>false</mpeg2>
+        <sample_rate>44100</sample_rate>
+        <profile>LC</profile>
+        <rate_control_mode>CBR</rate_control_mode>
+      </aac_settings>
+      <codec>aac</codec>
+      <audio_source_name>Audio Selector 1</audio_source_name>
+    </audio_description>
+  </stream_assembly>
+  <output_group>
+    <custom_name>adobe_rtmp</custom_name>
+    <name nil="true"/>
+    <order>1</order>
+    <rtmp_group_settings>
+      <ad_markers nil="true"/>
+      <cache_length>30</cache_length>
+      <caption_data>all</caption_data>
+      <cdn></cdn>
+      <disconnect_immediately>true</disconnect_immediately>
+      <enable_oncuepoint_broadcast_time>false</enable_oncuepoint_broadcast_time>
+      <onfi_timecode_frequency>1</onfi_timecode_frequency>
+      <restart_delay>15</restart_delay>
+    </rtmp_group_settings>
+    <type>rtmp_group_settings</type>
+    <output>
+      <arib_captions_passthrough>false</arib_captions_passthrough>
+      <description nil="true"/>
+      <extension>rtmp</extension>
+      <insert_amf_metadata>false</insert_amf_metadata>
+      <log_edit_points>false</log_edit_points>
+      <name_modifier nil="true"/>
+      <order>1</order>
+      <scte35_passthrough>false</scte35_passthrough>
+      <start_paused>false</start_paused>
+      <rtmp_settings>
+        <connection_retry_interval>2</connection_retry_interval>
+        <num_retries>10</num_retries>
+        <stream_name>stream_id</stream_name>
+        <rtmp_endpoint>
+          <uri>rtmp://54.68.219.43:1935/93904215043120130-1</uri>
+        </rtmp_endpoint>
+      </rtmp_settings>
+      <stream_assembly_name>stream_assembly_0</stream_assembly_name>
+      <container>rtmp</container>
+    </output>
+    <output>
+      <arib_captions_passthrough>false</arib_captions_passthrough>
+      <description nil="true"/>
+      <extension>rtmp</extension>
+      <insert_amf_metadata>false</insert_amf_metadata>
+      <log_edit_points>false</log_edit_points>
+      <name_modifier nil="true"/>
+      <order>2</order>
+      <scte35_passthrough>false</scte35_passthrough>
+      <start_paused>false</start_paused>
+      <rtmp_settings>
+        <connection_retry_interval>2</connection_retry_interval>
+        <num_retries>10</num_retries>
+        <stream_name>stream_id</stream_name>
+        <rtmp_endpoint>
+          <uri>rtmp://34.223.213.124:1935/93904215043120130-2</uri>
+        </rtmp_endpoint>
+      </rtmp_settings>
+      <stream_assembly_name>stream_assembly_1</stream_assembly_name>
+      <container>rtmp</container>
+    </output>
+  </output_group>
+</live_event>

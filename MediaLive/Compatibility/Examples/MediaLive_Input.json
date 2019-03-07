@@ -1,0 +1,8 @@
+{
+  "Input": {
+    "ID":         "example name",
+    "input_type": "RTMP_PUSH",
+    "bitrate":    "MAX_20_MBPS",
+    "resolution": "HD"
+  }
+}

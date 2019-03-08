@@ -66,4 +66,4 @@ uri | The second RTMP input from the MediaLive channel creation output
 :two: This parameter is only needed for the following input types: `'RTMP_PULL' | 'URL_PULL' | 'MP4_FILE'` <br>
 :three: Valid bitrate values are: `'MAX_10_MBPS' | 'MAX_20_MBPS' | 'MAX_50_MBPS'` <br>
 :four: Valid resolution values are: `'SD' | 'HD' | 'UHD'` <br>
-:five: See [MediaConnect Flow Creation](http://github.com/kulpbenamazon/MediaConnect') and [MediaConnect Product Information](https://aws.amazon.com/mediaconvert/) for more information on using AWS Elemental MediaConnect <br>
+:five: See [MediaConnect Flow Creation](http://github.com/aws-samples/aws-media-services-tools/tree/master/MediaConnect/Compatibility/Examples/') and [MediaConnect Product Information](https://aws.amazon.com/mediaconvert/) for more information on using AWS Elemental MediaConnect <br>

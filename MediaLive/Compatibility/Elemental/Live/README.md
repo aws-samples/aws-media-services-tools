@@ -10,9 +10,9 @@ How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RT
 An AWS Elemental MediaLive channel has two dependencies, an input and an output.  The example code below will create a MediaLive input and will use a HLS output to an AWS Elemental MediaPackage channel.  For a full list of possible outputs, see the MediaLive documentation available [here](https://docs.aws.amazon.com/medialive/latest/ug/creating-a-channel-step5.html).
 ### 1. Create an AWS Elemental MediaLive input
 ##### To create the MediaLive input, use either the Python script or AWS Lambda-optimized code below
-- [Create_MediaLive_Input.py](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Examples/Create_MediaLive_Input.py)
-- [MediaLive Input Lambda](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Examples/Lambda_Create_MediaLive_Input.py)
-- [Example RTMP_PUSH Input JSON](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Examples/MediaLive_Input.json)
+- [Create_MediaLive_Input.py](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/Create_MediaLive_Input.py)
+- [MediaLive Input Lambda](https://github.com/kulpbenamazon/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/Lambda_Create_MediaLive_Input.py)
+- [Example RTMP_PUSH Input JSON](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/MediaLive_Input.json)
 ##### Both scripts expect an input dictionary that contains the following information
 Parameter | Notes
 ------------ | -------------
@@ -28,9 +28,9 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 
 ### 2. Create an AWS Elemental MediaPackage channel
 ##### To create the MediaPackage channel for stream playback, use either the Python script or AWS Lambda-optimized code below
-- [Create_MediaPackage_Channel.py](https://github.com/kulpbenamazon/demo/blob/master/MediaPackage/Compatibility/Examples/Create_MediaPackage_Channel.py)
-- [Create MediaPackage Lambda](https://github.com/kulpbenamazon/demo/blob/master/MediaPackage/Compatibility/Examples/Lambda_Create_MediaPackage_Channel.py)
-- [Example Input JSON](https://github.com/kulpbenamazon/demo/blob/master/MediaPackage/Compatibility/Examples/MediaPackage_Channel.json)
+- [Create_MediaPackage_Channel.py](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaPackage/Compatibility/Examples/Create_MediaPackage_Channel.py)
+- [Create MediaPackage Lambda](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaPackage/Compatibility/Examples/Lambda_Create_MediaPackage_Channel.py)
+- [Example Input JSON](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaPackage/Compatibility/Examples/MediaPackage_Channel.json)
 ##### Both scripts expect an input dictionary that contains the following information
 Parameter | Notes
 ------------ | -------------
@@ -40,9 +40,9 @@ ID | A unique name for the MediaPackage resources
 
 ### 3. Create the MediaLive Channel
 ##### To create the MediaLive channel, use either the Python script or AWS Lambda-optimized code below
-- [Create_MediaLive_Channel.py](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Examples/Create_MediaLive_Channel.py)
-- [MediaLive Channel Lambda](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Examples/Lambda_Create_MediaLive_Channel.py)
-- [Example MediaLive channel creation JSON](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Examples/MediaLive_Input.json)
+- [Create_MediaLive_Channel.py](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/Create_MediaLive_Channel.py)
+- [MediaLive Channel Lambda](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/Lambda_Create_MediaLive_Channel.py)
+- [Example MediaLive channel creation JSON](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples//MediaLive_Input.json)
 ##### Both scripts expect an input data structure that contains the following information
 Parameter | Notes
 ------------ | -------------
@@ -52,13 +52,13 @@ destination_id | the output of the MediaPackage channel creation
 <br>
 
 ### 4. Configure AWS Elemental Live
-- [Example RTMP_PUSH Live Event XML](https://github.com/kulpbenamazon/demo/blob/master/MediaLive/Compatibility/Elemental/Live/RTMP_example.xml)
+- [Example RTMP_PUSH Live Event XML](/RTMP_example.xml)
 ##### In the example XML, replace the following values in the rtmp_settings configuration blocks.
 Parameter | Notes
 ------------ | -------------
 uri | The first RTMP input from the MediaLive channel creation output
 uri | The second RTMP input from the MediaLive channel creation output
-##### Create a new event, load the modified example event XML.  Once the template is loaded, adjust the input values to a valid local or network file location and start the event. 
+##### Create a new event, load the modified example event XML.  Once the template is loaded, adjust the input values to a valid local or network file location and start the event.
 <br>
 
 ### Notes
@@ -66,4 +66,4 @@ uri | The second RTMP input from the MediaLive channel creation output
 :two: This parameter is only needed for the following input types: `'RTMP_PULL' | 'URL_PULL' | 'MP4_FILE'` <br>
 :three: Valid bitrate values are: `'MAX_10_MBPS' | 'MAX_20_MBPS' | 'MAX_50_MBPS'` <br>
 :four: Valid resolution values are: `'SD' | 'HD' | 'UHD'` <br>
-:five: See [MediaConnect Flow Creation](http://github.com/kulpbenamazon/MediaConnect') and (link to aws website) for more information on using AWS Elemental MediaConnect <br>
+:five: See [MediaConnect Flow Creation](http://github.com/kulpbenamazon/MediaConnect') and [MediaConnect Product Information](https://aws.amazon.com/mediaconvert/) for more information on using AWS Elemental MediaConnect <br>

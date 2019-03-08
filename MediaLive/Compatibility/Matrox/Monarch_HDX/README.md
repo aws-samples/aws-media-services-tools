@@ -53,18 +53,18 @@ Matrox Software Product Documentation Downloads https://www.matrox.com/video/en/
 
 Full Documentation for the [Monarch HDX](https://www.matrox.com/video/en/support/downloads/download/?id=225&product=113&osName=28&productName=monarch_hdx&downloadType=Documentation)
 
-The MediaLive input creation will provide two input URLs with the following structure:
+The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]/[channel id]-1
-rtmp://[ip address]/[channel id]-2
+rtmp://[ip address]:1935/[channel id]-1
+rtmp://[ip address]:1935/[channel id]-2
 ```
 Take the inputs and substitute their values into the streamParam configuration blocks in the [MonarchHDX_Settings.xml](./MonarchHDX_Settings.xml)
 
 Parameter | Notes
 ------------ | -------------
-rtmpDestinationURL | rtmp://[ip address]/hdx
+rtmpDestinationURL | rtmp://[ip address]:1935/hdx
 rtmpStreamName | [channel id]-1
-rtmpDestinationURL | rtmp://[ip address]/hdx2
+rtmpDestinationURL | rtmp://[ip address]:1935/hdx2
 rtmpStreamName | [channel id]-2
 <br>
 

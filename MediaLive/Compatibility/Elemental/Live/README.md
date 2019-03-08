@@ -52,7 +52,7 @@ destination_id | the output of the MediaPackage channel creation
 <br>
 
 ### 4. Configure AWS Elemental Live
-- [Example RTMP_PUSH Live Event XML](/RTMP_example.xml)
+- [Example RTMP_PUSH Live Event XML](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Elemental/Live/RTMP_example.xml)
 ##### In the example XML, replace the following values in the rtmp_settings configuration blocks.
 Parameter | Notes
 ------------ | -------------

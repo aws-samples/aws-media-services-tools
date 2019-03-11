@@ -50,8 +50,8 @@ destination_id | the output dictionary from the MediaPackage channel creation
 ### 4. Configure the Boxcast Platform
 The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address]/[channel id]-1
-rtmp://[ip address]/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 Use the provided [Boxcast Blog Post](https://boxcast.zendesk.com/hc/en-us/articles/360022974052-How-to-Broadcast-to-AWS-Elemental-MediaLive-via-BoxCast) to configure the Boxcast Platform.
 

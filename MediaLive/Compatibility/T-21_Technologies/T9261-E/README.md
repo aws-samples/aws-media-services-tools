@@ -57,14 +57,14 @@ destination_id | the output of the MediaPackage channel creation
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]:1935/[channel id]-1
-rtmp://[ip address]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 Under Endcode Outputs, configure the T9261 with the following values:
 Parameter | Notes
 ------------ | -------------
 Protocol | RTMP (client)
-URL | rtmp://[ip address]:1935/[channel id]-1
+URL | rtmp://[ip address 1]:1935/[channel id]-1
 Video Profile | rtmpDefault
 Audio Profile | rtmpDefault
 

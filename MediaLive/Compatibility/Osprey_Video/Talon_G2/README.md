@@ -7,3 +7,13 @@ How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RT
 
 
 ### 4. Configure the Talon G2
+- Osprey Talon G2 [product page](https://www.ospreyvideo.com/images/osprey/datasheets/Talon_Encoder_Specs.pdf)
+- Osprey Talon G2 [API guide](./Talon_Encoder_API_1_10_0_250.pdf)
+- Osprey Talon G2 [user manual](./Talon_Encoder_User_Guide_2018_10.pdf)
+
+The MediaLive input creation provides two input URLs with the following structure:
+```
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
+```
+Use those values to configure the Talon G2

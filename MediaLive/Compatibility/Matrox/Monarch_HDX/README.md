@@ -12,16 +12,16 @@ How to connect Elemental Live to a MediaLive channel using RTMP Push
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]:1935/[channel id]-1
-rtmp://[ip address]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 Take the inputs below and substitute their values into the streamParam configuration blocks in the [MonarchHDX_Settings.xml](./MonarchHDX_Settings.xml)
 
 Parameter | Notes
 ------------ | -------------
-rtmpDestinationURL | rtmp://[ip address]:1935/hdx
+rtmpDestinationURL | rtmp://[ip address 1]:1935/hdx
 rtmpStreamName | [channel id]-1
-rtmpDestinationURL | rtmp://[ip address]:1935/hdx2
+rtmpDestinationURL | rtmp://[ip address 2]:1935/hdx2
 rtmpStreamName | [channel id]-2
 Load the resultant XML
 

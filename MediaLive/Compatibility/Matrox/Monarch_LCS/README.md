@@ -14,16 +14,16 @@ Full Documentation for the [Monarch LCS](https://www.matrox.com/video/en/support
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]:1935/[channel id]-1
-rtmp://[ip address]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 Take the inputs and substitute their values into the streamParam configuration blocks in the [MonarchLCS_Settings.xml](./MonarchLCS_Settings.xml)
 
 Parameter | Notes
 ------------ | -------------
-rtmpDestinationURL | rtmp://[ip address]:1935/lcs
+rtmpDestinationURL | rtmp://[ip address 1]:1935/lcs
 rtmpStreamName | [channel id]-1
-rtmpDestinationURL | rtmp://[ip address]:1935/lcs2
+rtmpDestinationURL | rtmp://[ip address 2]:1935/lcs2
 rtmpStreamName | [channel id]-2
 <br>
 

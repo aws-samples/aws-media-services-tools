@@ -7,14 +7,18 @@ How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RT
 
 
 ### 4. Configure Zixi On Air
+- Zixi On Air [product info](https://www.zixi.com/applications-on-air)
+- Zixi On Air [App Store Link](https://itunes.apple.com/us/developer/zixi/id1279219968) [Google Play Link](https://play.google.com/store/apps/developer?id=Zixi)
+
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]:1935/[channel id]-1
-rtmp://[ip address]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 
-##### Open :
+Open the Settings page and enter the parameters below:
 Parameter | Notes
 ------------ | -------------
- URL | rtmp://[ip address]:1935/
- Stream Key | [channel_id]-1
+Protocol | RTMP
+URL | rtmp://[ip address 1]:1935/
+Stream Key | [channel_id]-1

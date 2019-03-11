@@ -59,16 +59,16 @@ Full Documentation for the [Monarch HD](https://www.matrox.com/video/en/support/
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]:1935/[channel id]-1
-rtmp://[ip address]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 Take the inputs and substitute their values into the streamParam configuration blocks in the [MonarchHD_Settings.xml](./MonarchHD_Settings.xml)
 
 Parameter | Notes
 ------------ | -------------
-rtmpDestinationURL | rtmp://[ip address]:1935/hd
+rtmpDestinationURL | rtmp://[ip address 1]:1935/hd
 rtmpStreamName | [channel id]-1
-rtmpDestinationURL | rtmp://[ip address]:1935/hd2
+rtmpDestinationURL | rtmp://[ip address 2]:1935/hd2
 rtmpStreamName | [channel id]-2
 
 

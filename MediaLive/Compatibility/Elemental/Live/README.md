@@ -52,13 +52,19 @@ destination_id | the output of the MediaPackage channel creation
 
 
 ### 4. Configure AWS Elemental Live
-- [Example RTMP_PUSH Live Event XML](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Elemental/Live/RTMP_example.xml)
-##### In the example XML, replace the following values in the rtmp_settings configuration blocks.
+- Elemental Live [product documentation]()
+- Example RTMP_PUSH [Live Event XML](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Elemental/Live/RTMP_example.xml)
+The MediaLive input creation provides two input URLs with the following structure:
+```
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
+```
+In the example XML, replace the following values in the rtmp_settings configuration blocks.
 Parameter | Notes
 ------------ | -------------
-uri | The first RTMP input from the MediaLive channel creation output
-uri | The second RTMP input from the MediaLive channel creation output
-##### Create a new event, load the modified example event XML.  Once the template is loaded, adjust the input values to a valid local or network file location and start the event.
+uri | rtmp://[ip address 1]:1935/[channel id]-1
+uri | rtmp://[ip address 2]:1935/[channel id]-2
+Create a new event, load the modified example event XML.  Once the template is loaded, adjust the input values to a valid local or network file location and start the event.
 
 
 ### Notes

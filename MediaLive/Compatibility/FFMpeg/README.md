@@ -6,7 +6,9 @@ How to connect Elemental Live to a MediaLive channel using RTMP Push
 4. [Configure FFmpeg](#4-configure-ffmpeg)
 
 
-
-
-
 ### 4. Configure FFmpeg
+Following the detailed directions [here](https://d1.awsstatic.com/awselemental/workflowexamples/Workflow4_Example_FFMPEG_RTMP_to_MediaLive_and_MediaPackage.pdf) using the inputs the provided by MediaLive below.
+```
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
+```

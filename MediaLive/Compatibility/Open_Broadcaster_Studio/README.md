@@ -9,12 +9,12 @@ How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RT
 ### 4. Configure OBS
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address]:1935/[channel id]-1
-rtmp://[ip address]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/[channel id]-1
+rtmp://[ip address 2]:1935/[channel id]-2
 ```
 
 ##### Open the settings panel, select stream, and use the parameters below:
 Parameter | Notes
 ------------ | -------------
- URL | rtmp://[ip address]:1935/
+ URL | rtmp://[ip address 1]:1935/
  Stream Key | [channel_id]-1

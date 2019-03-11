@@ -1,14 +1,14 @@
-# RTMP Streaming with Aja Helo and AWS MediaLive
+# RTMP Streaming with AJA HELO and AWS MediaLive
 How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RTMP Push
 1. [Create an AWS Elemental MediaLive Input](#1-create-an-aws-elemental-medialive-input)
 2. [Create an AWS Elemental MediaPackage Channel](#2-create-an-aws-elemental-mediapackage-channel)
 3. [Create the MediaLive Channel](#3-create-the-medialive-channel)
-4. [Configure the Aja Helo](#4-configure-the-aja-helo)
+4. [Configure the AJA HELO](#4-configure-the-aja-helo)
 
 
-### 4. Configure the Aja Helo
-- Aja Helo [product information](https://www.aja.com/products/helo)
-- Aja Helo [Manual PDF](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Aja/Helo/AJA_HELO_Manual_v1.1r1.pdf)
+### 4. Configure the AJA HELO
+- AJA HELO [product information](https://www.aja.com/products/helo)
+- AJA HELO [Manual PDF](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Aja/Helo/AJA_HELO_Manual_v1.1r1.pdf)
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```

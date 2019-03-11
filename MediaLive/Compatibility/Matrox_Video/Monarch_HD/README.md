@@ -1,4 +1,4 @@
-# RTMP Streaming with Matrox Monarch HD and AWS MediaLive
+# RTMP Streaming with Matrox Video Monarch HD and AWS MediaLive
 How to connect Elemental Live to a MediaLive channel using RTMP Push
 1. [Create a MediaLive Input](#1-create-the-medialive-input)
 2. [Create a MediaPackage Channel for playback](#2-create-a-mediapackage-channel-for-playback-of-the-medialive-stream)
@@ -53,9 +53,8 @@ destination_id | the output of the MediaPackage channel creation
 
 ### 4. Configure Monarch HD to push to the MediaLive Input
 
-Matrox Software Product Documentation Downloads https://www.matrox.com/video/en/support/downloads/
-
-Full Documentation for the [Monarch HD](https://www.matrox.com/video/en/support/downloads/download/?id=244&product=77&osName=28&productName=monarch_hd&downloadType=Documentation)
+- Matrox Video software [product documentation](https://www.matrox.com/video/en/support/downloads/)
+- Monarch HD [product documentation](https://www.matrox.com/video/en/support/downloads/download/?id=244&product=77&osName=28&productName=monarch_hd&downloadType=Documentation)
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```

@@ -1,4 +1,4 @@
-# RTMP Streaming with Aja Helo and AWS MediaLive
+# RTMP Streaming with the Anevia Genova Live and AWS MediaLive
 How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RTMP Push
 1. [Create an AWS Elemental MediaLive Input](#1-create-an-aws-elemental-medialive-input)
 2. [Create an AWS Elemental MediaPackage Channel](#2-create-an-aws-elemental-mediapackage-channel)

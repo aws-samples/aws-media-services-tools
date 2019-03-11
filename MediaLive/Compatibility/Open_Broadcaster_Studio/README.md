@@ -13,8 +13,7 @@ rtmp://[ip address]:1935/[channel id]-1
 rtmp://[ip address]:1935/[channel id]-2
 ```
 
-##### Open the settings panel, select stream, and enter the parameters below in the appropriate fields
-
+##### Open the settings panel, select stream, and use the parameters below:
 Parameter | Notes
 ------------ | -------------
  URL | rtmp://[ip address]:1935/

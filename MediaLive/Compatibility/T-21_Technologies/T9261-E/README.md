@@ -52,8 +52,8 @@ destination_id | the output of the MediaPackage channel creation
 
 
 ### 4. Configure the T9261
-T9261-E [product documentation](http://t2b.d4a.myftpupload.com/t9261e/)
-T9261-E [Manual PDF](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/T-21_Technologies/T9261-E/T9261.pdf)
+- T9261-E [product documentation](http://t2b.d4a.myftpupload.com/t9261e/)
+- T9261-E [Manual PDF](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/T-21_Technologies/T9261-E/T9261.pdf)
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```

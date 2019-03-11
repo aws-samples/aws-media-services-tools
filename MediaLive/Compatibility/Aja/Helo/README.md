@@ -8,7 +8,7 @@ How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RT
 
 ### 4. Configure the Aja Helo
 Aja Helo [product information](https://www.aja.com/products/helo)
-Aja Helo [Manual PDF](/AJA_HELO_Manual_v1.1r1.pdf)
+Aja Helo [Manual PDF](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Aja/Helo/AJA_HELO_Manual_v1.1r1.pdf)
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```

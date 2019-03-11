@@ -3,7 +3,7 @@ How to connect Elemental Live to a MediaLive channel using RTMP Push
 1. [Create a MediaLive Input](#1-create-the-medialive-input)
 2. [Create a MediaPackage Channel for playback](#2-create-a-mediapackage-channel-for-playback-of-the-medialive-stream)
 3. [Create the MediaLive Channel](#3-create-the-medialive-channel)
-4. [Configure the Boxcast Platform to push RTMP to MediaLive](#4-configure-the-boxcast-platform-to-push-to-the-medialive-input)
+4. [Configure the Boxcast Platform](#4-configure-the-boxcast-platform)
 <br>
 
 ## Detailed Instructions and Examples
@@ -47,13 +47,13 @@ input_id | the output ID from the MediaLive Input creation
 destination_id | the output dictionary from the MediaPackage channel creation
 <br>
 
-### 4. Configure the Boxcast Platform to push to the MediaLive Input
+### 4. Configure the Boxcast Platform
 The MediaLive input creation will provide two input URLs with the following structure:
 ```
 rtmp://[ip address]/[channel id]-1
 rtmp://[ip address]/[channel id]-2
 ```
-Use the provided [Boxcast Blog Post](https://boxcast.zendesk.com/hc/en-us/articles/360022974052-How-to-Broadcast-to-AWS-Elemental-MediaLive-via-BoxCast) to configure the Boxcast Platform. 
+Use the provided [Boxcast Blog Post](https://boxcast.zendesk.com/hc/en-us/articles/360022974052-How-to-Broadcast-to-AWS-Elemental-MediaLive-via-BoxCast) to configure the Boxcast Platform.
 
 <br>
 

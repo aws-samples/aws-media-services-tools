@@ -7,9 +7,14 @@ How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RT
 
 
 ### 4. Configure the Tricaster
+The MediaLive input creation provides two input URLs with the following structure:
+```
+rtmp://[ip address]:1935/[channel id]-1
+rtmp://[ip address]:1935/[channel id]-2
+```
+Using the Tricaster, configure a custom Stream with the following parameters:
 
 Parameter | Notes
 ------------ | -------------
- | The first RTMP input from the MediaLive channel creation output
-
-#####
+Server Address | rtmp://[ip address]:1935/
+Stream ID | [channel id]-1

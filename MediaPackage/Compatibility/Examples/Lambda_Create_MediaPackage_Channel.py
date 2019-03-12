@@ -11,7 +11,7 @@ push content to MediaPackage.  These credentials are returned as a data
 structure that is required for the MediaLive channel creation script
 
 Dependencies:
-This script assumes an appropriate Lambda execution role that has access
+This script assumes an appropriate Lambda execution IAM role that has access
 to the MediaPackage, and SSM services.
 
 Inputs:
@@ -85,7 +85,7 @@ def create_param_store_entry(client, ps_name, ps_value, ps_description='later'):
 
 def lambda_handler(event):
     # for local execution, the profile is used to grant permissions for the AWS requests
-    profile = boto3.session.Session(profile_name)
+    profile = boto3.session.Session()
     ssm = profile.client('ssm', region_name='us-west-2')
     package = profile.client('mediapackage', region_name='us-west-2')
     ID = event['ID']

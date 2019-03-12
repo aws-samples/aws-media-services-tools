@@ -580,7 +580,7 @@ def lambda_handler(event, context):
     # assum the AWS SECET KEY, etc are provided as environment variables
     # in the lambda runtime.
     #
-    profile = boto3.session.Session(profile_name)
+    profile = boto3.session.Session(profile_name=profile_name)
     live = profile.client('medialive', region_name='us-west-2')
     package = profile.client('mediapackage', region_name='us-west-2')
     ssm = profile.client('ssm', region_name='us-west-2')

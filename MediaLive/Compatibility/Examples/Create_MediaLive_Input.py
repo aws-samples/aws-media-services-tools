@@ -27,6 +27,7 @@ input =
       'mediaconnect_flows':    ["list of", "mediaconnectflows"],
 }
 '''
+
 profile_name = 'the AWS CLI profile to use while creating MediaLive Resources'
 
 input = {
@@ -116,8 +117,59 @@ def mediaconnect(client, Id, sg, flows, arn):
     )
     return response
 
+# validates that a pull-based inputs have exactly two sources defined.
+# returns a properly formatted list of source urls
+def url_validator(input):
+    try:
+        urls = input['source_urls']
+        if len(urls) == 0:
+            print("No Sources defined, exiting now")
+            exit(1)
+        elif len(urls) != 2:
+            if len(urls) >= 2:
+                del urls[2:]
+            urls.append(urls[0])
+    except KeyError:
+        print("No Source URLs provided, with input, exiting now")
+        exit(1)
+    return urls
 
-profile = boto3.session.Session(profile_name)
+
+# validates that a MEDIACONNECT input has MediaConnect flows defined for it.
+# returns properly formatted MediaConnect flow ARNs
+def media_connect_validator(input):
+    try:
+        flows = input['mediaconnectflows']
+        if len(flows) > 2:
+            print("Too many MediaConnect flows provided, only using the first two")
+            del flows[2:]
+        elif len(flows) == 0:
+            print("No MediaConnect flows provided, exiting now")
+            exit(1)
+    except KeyError:
+        print("No MediaConnect Flows provided, with mediaconnect input, exiting now")
+        exit(1)
+    out = []
+    for x in flows:
+        out.append({"FlowArn": x})
+    return out
+
+# TODO: replace with better code for providing an input security group
+# or force the creation of a new Input security group each time
+def input_sg(client):
+    try:
+        response = client.list_input_security_groups()['InputSecurityGroups']
+        return response[0]['Id']
+    except KeyError:
+        response = client.create_input_security_group(
+            WhitelistRules=[
+                {"Cidr": "0.0.0.0/0"}
+            ])
+        return response['SecurityGroup']['Id']
+
+
+
+profile = boto3.session.Session(profile_name=profile_name)
 live = profile.client('medialive', region_name='us-west-2')
 
 ID = input['ID']

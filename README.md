@@ -15,7 +15,7 @@ Each AWS Media Service has a sub-directory, inside it, you'll find scripts for s
 #### Compatibility documentation:
 
 Each AWS Media Service directory has a Compatibility sub-directory, inside you'll find further sub-directories for partner companies and products that we have been determined compatible with that AWS Media Service.  To the best of our ability we attempt to provide comprehensive documentation for reproducing our compatibility testing. This includes example configurations, links to detailed documentation, and scripts for starting the products.   
-Please see the AWS Media Service Compatibility [website](https://aws.amazon.com/media-services/compatibility/#) for full details on the compatibility program and how to become a compatibility partner.
+Please see the AWS Media Service Compatibility [website](https://aws.amazon.com/media-services/resources/compatibility/) for full details on the compatibility program and how to become a compatibility partner.
 
 
 ## License

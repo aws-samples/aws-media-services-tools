@@ -10,7 +10,7 @@ creating a MediaLive Channel.
 
 Dependencies:
 This script assumes an appropriate Lambda execution IAM role that has access
-to the MediaLive service.
+to use the MediaLive service.
 
 Inputs:
 Expects an input dictionary provided to the Lambda function

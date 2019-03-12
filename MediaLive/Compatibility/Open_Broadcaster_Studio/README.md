@@ -22,7 +22,6 @@ source_urls | An array of source URLs from which MediaLive will pull content [:t
 bitrate | The expected bitrate of the stream [:three:](#notes)
 resolution | The expected resolution of the stream [:four:](#notes)
 mediaconnect_flows | An array of ARNs (Amazon Resource Names) for the AWS Elemental MediaConnect flows [:five:](#notes)
-medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 ##### Both scripts will return the MediaLive Input ID, note the value, because it is needed to create the MediaLive Channel
 
 
@@ -49,6 +48,7 @@ Parameter | Notes
 ID | a unique name for the MediaLive resources
 input_id | the output of the MediaLive input creation
 destination_id | the output of the MediaPackage channel creation
+medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 
 
 ### 4. Configure OBS

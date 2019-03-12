@@ -1,40 +1,42 @@
 import boto3
-# import random
-#
-#
-# assumes Lambda event input in json format like:
-#
-# { "input": {
-#       "TEST_ID":              "ID for the test",
-#       "input_type":                 'RTP_PUSH' | 'RTMP_PUSH' | 'RTMP_PULL' |
-#                               'URL_PULL' | 'MP4_FILE' | 'MEDIACONNECT'
-#       "endpoint":             <Only includeded with pull inputs>,
-#       "source_urls":          ["list of", "source urls"]
-#       'bitrate':              'MAX_10_MBPS' | 'MAX_20_MBPS' | 'MAX_50_MBPS'
-#       'resolution':           'SD' | 'HD' | 'UHD'
-#       'mediaconnectflows':    ["list of", "mediaconnectflows"],
-#       'medialivearn':         "the arn for the role MediaLive uses"
-# }
-#
-###                   ###
-###  TEST RESOURCES   ###
-#
-# uncomment the following to test locally instead of in Lambda
-# TEST_ID="test-id-%s" % (str(random.randint(100,900)))
-#
-# event = {
-#     "input": {
-#         "TEST_ID": "%s" % TEST_ID,
-#         "type": 'MP4_FILE',
-#         "bitrate": "MAX_20_MBPS",
-#         "resolution": "HD",
-#         "destination": "s3://bluegill-output/%s/" % TEST_ID,
-#         "source_urls": ["http://sumbplace.com/file.mp4"],
-#         "mediaconnectflows": ["arn:aws:mediaconnect:us-west-2:657276638238:flow:1-VwBYDQYBVwUGVANZ-968954869347:test"],
-#         "medialivearn": "arn:aws:iam::657276638238:role/MediaLiveAccessRole"
-#     }
-# }
 
+
+'''
+How to use:
+Modify the event and profile variable definitions and execute the script
+python3 ./Create_MediaLive_Channel.py
+
+What does it do:
+This script will create a MediaLive Channel, it has two prerequisites: a
+MediaLive Input, which is where video will originate from and a MediaPackage
+Destination, where the video will be delivered.
+
+Dependencies:
+This script assumes an AWS CLI profile is avilable on the system it runs on.
+For information about setting up local authentication:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+It also expects a IAM RoleArn that the MediaLive Channel will use.
+
+Inputs:
+The input_id and destination_id can be created using these scripts:
+https://github.com/aws-samples/aws-media-services-tools/blob/master/MediaPackage/Compatibility/Examples/Create_MediaPackage_Channel.py
+https://github.com/aws-samples/aws-media-services-tools/blob/master/MediaLive/Compatibility/Examples/Create_MediaLive_Input.py
+input = {
+    'ID': 'test channel',
+    'input_id': 'the output of the MediaLive Input creation script',
+    'destination_id': {
+        'Username':  'user 1',
+        'Password':  'credentials',
+        'URL':       'destination url 1',
+        'Username2': 'user 2',
+        'Password2': 'credentials',
+        'URL2':      'destination url 2',
+    },
+    'medialive_arn': 'Arn::'
+}
+'''
+
+input = {}
 
 # creates a MediaPackage channel
 def create_mediapackage(client, Id):

@@ -1,0 +1,13 @@
+{
+  "ID": "test channel",
+  "input_id": "A MediaLive Input Id",
+  "destination_id": {
+      "Username":  "user 1",
+      "Password":  "credentials",
+      "URL1":       "destination url 1",
+      "Username2": "user 2",
+      "Password2": "credentials",
+      "URL2":      "destination url 2",
+  },
+  "medialive_arn": "AWS ARN for MediaLive to use"
+}

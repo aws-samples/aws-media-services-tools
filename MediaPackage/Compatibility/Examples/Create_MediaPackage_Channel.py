@@ -11,14 +11,16 @@ Additionally, it will create SSM records that MediaLive will use to securely
 push content to MediaPackage.  These credentials are returned as a data
 structure that is required for the MediaLive channel creation script
 
+Dependencies:
 This script assumes an AWS CLI profile is avilable on the system it runs on
 For information about setting up local authentication:
 https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+
+Inputs:
+You must provide an event dictionary, with an 'ID' field
 '''
-profile_name = 'the AWS CLI profile to use while creating MediaLive Resources'
 
-
-## You must provide an event dictionary, with an 'ID' field
+profile_name = 'the AWS CLI profile to use while creating MediaPackage Resources'
 event = {
     "ID": "test channel",
 }

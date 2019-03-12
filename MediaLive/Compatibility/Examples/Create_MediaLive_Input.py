@@ -1,15 +1,33 @@
 import boto3
 
-# input =
-# {
-#       "ID":                   'ID for the channel',
-#       "input_type":           'RTP_PUSH' | 'RTMP_PUSH' | 'RTMP_PULL' |
-#                               'URL_PULL' | 'MP4_FILE' | 'MEDIACONNECT'
-#       "source_urls":          ["list of", "source urls"]
-#       'bitrate':              'MAX_10_MBPS' | 'MAX_20_MBPS' | 'MAX_50_MBPS'
-#       'resolution':           'SD' | 'HD' | 'UHD'
-#       'mediaconnect_flows':    ["list of", "mediaconnectflows"],
-# }
+'''
+How to use:
+Modify the event and profile variable definitions and execute the script
+python3 ./Create_MediaPackage_Channel.py
+
+What does it do:
+This script will create a MediaLive Input, one of two prerequisies for
+creating a MediaLive Channel.
+
+Dependencies:
+This script assumes an AWS CLI profile is avilable on the system it runs on.
+For information about setting up local authentication:
+https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+
+Inputs:
+Expects an input dictionary as follows
+input =
+{
+      "ID":                   'ID for the channel',
+      "input_type":           'RTP_PUSH' | 'RTMP_PUSH' | 'RTMP_PULL' |
+                              'URL_PULL' | 'MP4_FILE' | 'MEDIACONNECT'
+      "source_urls":          ["list of", "source urls"]
+      'bitrate':              'MAX_10_MBPS' | 'MAX_20_MBPS' | 'MAX_50_MBPS'
+      'resolution':           'SD' | 'HD' | 'UHD'
+      'mediaconnect_flows':    ["list of", "mediaconnectflows"],
+}
+'''
+profile_name = 'the AWS CLI profile to use while creating MediaLive Resources'
 
 input = {
     "ID": "test channel",
@@ -99,7 +117,7 @@ def mediaconnect(client, Id, sg, flows, arn):
     return response
 
 
-profile = boto3.session.Session()
+profile = boto3.session.Session(profile_name)
 live = profile.client('medialive', region_name='us-west-2')
 
 ID = input['ID']

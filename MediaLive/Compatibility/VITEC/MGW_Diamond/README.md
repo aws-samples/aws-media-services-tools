@@ -41,7 +41,7 @@ ID | A unique name for the MediaPackage resources
 ##### To create the MediaLive channel, use either the Python script or AWS Lambda-optimized code below
 - [Create_MediaLive_Channel.py](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/Create_MediaLive_Channel.py)
 - [MediaLive Channel Lambda](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/Lambda_Create_MediaLive_Channel.py)
-- [Example MediaLive channel creation JSON](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples//MediaLive_Input.json)
+- [Example MediaLive channel creation JSON](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples/MediaLive_Channel.json)
 ##### Both scripts expect an input data structure that contains the following information
 Parameter | Notes
 ------------ | -------------

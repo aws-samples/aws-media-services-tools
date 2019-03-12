@@ -52,7 +52,6 @@ destination_id | the output of the MediaPackage channel creation
 
 
 ### 4. Configure Monarch HD to push to the MediaLive Input
-
 - Matrox Video software [product documentation](https://www.matrox.com/video/en/support/downloads/)
 - Monarch HD [product documentation](https://www.matrox.com/video/en/support/downloads/download/?id=244&product=77&osName=28&productName=monarch_hd&downloadType=Documentation)
 

@@ -1,9 +1,9 @@
-# RTMP Streaming with Epiphan Pearl 2 and AWS MediaLive
-How to connect Elemental Live to a MediaLive channel using RTMP Push
-1. [Create a MediaLive Input](#1-create-the-medialive-input)
-2. [Create a MediaPackage Channel for playback](#2-create-a-mediapackage-channel-for-playback-of-the-medialive-stream)
+# RTMP Streaming with the Net Insight Nimbra VA and AWS MediaLive
+How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RTMP Push
+1. [Create an AWS Elemental MediaLive Input](#1-create-an-aws-elemental-medialive-input)
+2. [Create an AWS Elemental MediaPackage Channel](#2-create-an-aws-elemental-mediapackage-channel)
 3. [Create the MediaLive Channel](#3-create-the-medialive-channel)
-4. [Configure the Pearl 2](#4-configure-the-pearl-2)
+4. [Configure the Nimbra VA](#4-configure-the-nimbra-va)
 
 
 ## Detailed Instructions and Examples
@@ -51,13 +51,15 @@ input_id | the output of the MediaLive input creation
 destination_id | the output of the MediaPackage channel creation
 
 
-### 4. Configure the Pearl 2
-The MediaLive input creation will provide two input URLs with the following structure:
+### 4. Configure the Nimbra VA
+- Net Insight [product information](https://netinsight.net/products-services/)
+-
+The MediaLive input creation provides two input URLs with the following structure:
 ```
 rtmp://[ip address 1]:1935/[channel id]-1
 rtmp://[ip address 2]:1935/[channel id]-2
 ```
-Use the provided [pdf directions](./pearl-StreamingGuide-amazon-4-7-1.pdf) to configure the Pearl 2.
+Configure the Nimbra VA using the provided RTMP inputs.
 
 
 ### Notes

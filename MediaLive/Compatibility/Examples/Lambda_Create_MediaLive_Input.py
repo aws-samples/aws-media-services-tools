@@ -168,7 +168,6 @@ def lambda_handler(event, context):
 
 
     ID = event['ID']
-    arn = event['medialivearn']
     destinations = ""
 
     # create the specified input

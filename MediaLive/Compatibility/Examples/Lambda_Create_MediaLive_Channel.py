@@ -42,17 +42,6 @@ input = {}
 # creates the MediaLive channel using the input created and using a large
 # block of boilerplate encoder settings
 def create_channel(client, input_id, destination, ID, event, arn):
-    # the input_id is just the ID of the input we dynamically create earlier
-    #
-    # the first destination should always follow the pattern:
-    # s3://bluegill-output/TEST_ID/
-    #
-    # the second destination, which gets passed into the function
-    # should always be a dynamically created
-    # mediapackage endpoint for showing playback
-    #
-    # If you're extending this function for some non-bluegill usage, you'll
-    # want to provide  a way of passing in the correct destinations for MediaLive
     response = client.create_channel(
         Destinations=[
          {
@@ -78,6 +67,79 @@ def create_channel(client, input_id, destination, ID, event, arn):
             "Source": "SYSTEMCLOCK"
         },
         "OutputGroups": [
+            {
+                "OutputGroupSettings": {
+                    "HlsGroupSettings": {
+                        "TimedMetadataId3Frame": "PRIV",
+                        "CaptionLanguageMappings": [],
+                        "Destination": {
+                            "DestinationRefId": "%s-mp" % ID,
+                        },
+                        "IvSource": "FOLLOWS_SEGMENT_NUMBER",
+                        "IndexNSegments": 7,
+                        "InputLossAction": "EMIT_OUTPUT",
+                        "ManifestDurationFormat": "FLOATING_POINT",
+                        "CodecSpecification": "RFC_4281",
+                        "IvInManifest": "INCLUDE",
+                        "TimedMetadataId3Period": 2,
+                        "ProgramDateTimePeriod": 2,
+                        "SegmentLength": 10,
+                        "CaptionLanguageSetting": "OMIT",
+                        "ProgramDateTime": "INCLUDE",
+                        "HlsCdnSettings": {
+                            "HlsBasicPutSettings": {
+                                "ConnectionRetryInterval": 1,
+                                "FilecacheDuration": 300,
+                                "NumRetries": 10
+                            }
+                        },
+                        "TsFileMode": "SEGMENTED_FILES",
+                        "StreamInfResolution": "INCLUDE",
+                        "ClientCache": "ENABLED",
+                        "AdMarkers": [
+                            "ELEMENTAL_SCTE35"
+                        ],
+                        "KeepSegments": 360,
+                        "SegmentationMode": "USE_SEGMENT_DURATION",
+                        "OutputSelection": "MANIFESTS_AND_SEGMENTS",
+                        "ManifestCompression": "NONE",
+                        "DirectoryStructure": "SINGLE_DIRECTORY",
+                        "Mode": "LIVE"
+                    }
+                },
+                "Outputs": [
+                    {
+                        "VideoDescriptionName": "video_1080p30",
+                        "AudioDescriptionNames": [
+                            "audio_1"
+                        ],
+                        "CaptionDescriptionNames": [],
+                        "OutputSettings": {
+                            "HlsOutputSettings": {
+                                "NameModifier": "_1080p30",
+                                "HlsSettings": {
+                                    "StandardHlsSettings": {
+                                        "M3u8Settings": {
+                                            "PcrControl": "PCR_EVERY_PES_PACKET",
+                                            "TimedMetadataBehavior": "NO_PASSTHROUGH",
+                                            "PmtPid": "480",
+                                            "Scte35Pid": "500",
+                                            "VideoPid": "481",
+                                            "ProgramNum": 1,
+                                            "AudioPids": "492-498",
+                                            "AudioFramesPerPes": 4,
+                                            "EcmPid": "8182",
+                                            "Scte35Behavior": "PASSTHROUGH"
+                                        },
+                                        "AudioRenditionSets": "PROGRAM_AUDIO"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                ],
+                "Name": "S3"
+            },
             {
                 "OutputGroupSettings": {
                     "HlsGroupSettings": {
@@ -279,8 +341,7 @@ def create_channel(client, input_id, destination, ID, event, arn):
         ]
         },
         Name=ID,
-        RoleArn=arn
-    )
+        RoleArn=arn)
     return response
 
 
@@ -288,7 +349,7 @@ def create_channel(client, input_id, destination, ID, event, arn):
 def lambda_handler(event, context):
     # The client initiated below is for production Lambda usage and
     # assumes an appropriate IAM role is assigned to the Lambda
-    profile = boto3.session.Session(profile_name=profile_name)
+    profile = boto3.session.Session()
     live = profile.client('medialive', region_name='us-west-2')
     ID = event['ID']
     arn = event['medialive_arn']

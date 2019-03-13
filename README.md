@@ -7,7 +7,7 @@ A library of scripts for interacting with AWS Media Services and documentation f
 #### Library of  scripts for interacting with AWS Media Services:
 
 Each AWS Media Service has a sub-directory, inside it, you'll find scripts for starting and stopping the service written in Python 3.7 and formatted to either run locally or as AWS Lambda functions. You'll also find documentation on what inputs these scripts expect, what outputs they deliver, and examples for using them in conjunction.  
-- [MediaConnect scripts](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaConnect/Compatibility/Examples)
+- [MediaConnect scripts](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaConnect/Compatibility/Examples) (work in progress)
 - [MediaLive scripts](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Examples)
 - [MediaPackage scripts](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaPackage/Compatibility/Examples)
 

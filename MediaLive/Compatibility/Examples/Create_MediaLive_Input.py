@@ -28,10 +28,10 @@ input =
 }
 '''
 
-profile_name = 'the AWS CLI profile to use while creating MediaLive Resources'
+profile_name = 'Valid AWS CLI profile'
 
 input = {
-    "ID": "test channel",
+    "ID": "2315432",
     "input_type": "RTMP_PUSH",
     "bitrate": "MAX_20_MBPS",
     "resolution": "HD"
@@ -173,7 +173,6 @@ profile = boto3.session.Session(profile_name=profile_name)
 live = profile.client('medialive', region_name='us-west-2')
 
 ID = input['ID']
-arn = input['medialive_arn']
 
 # create the specified input
 if ['input_type'] == 'RTP_PUSH':

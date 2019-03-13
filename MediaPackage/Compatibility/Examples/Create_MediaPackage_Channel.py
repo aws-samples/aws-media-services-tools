@@ -20,16 +20,16 @@ Inputs:
 You must provide an event dictionary, with an 'ID' field
 '''
 
-profile_name = 'the AWS CLI profile to use while creating MediaPackage Resources'
+profile_name = 'Valid AWS CLI profile'
 event = {
-    "ID": "test channel",
+    "ID": "2315432",
 }
 
 
 # creates a MediaPackage channel
 def create_mediapackage(client, Id):
     response = client.create_channel(
-        Description="Channel: %s" % Id,
+        Description="Channel: ",
         Id=Id)
     ingest_points = response['HlsIngest']['IngestEndpoints']
     return ingest_points
@@ -90,10 +90,11 @@ def create_param_store_entry(client, ps_name, ps_value, ps_description='later'):
 
 def lambda_handler(event):
     # for local execution, the profile is used to grant permissions for the AWS requests
-    profile = boto3.session.Session(profile_name)
+    profile = boto3.session.Session(profile_name=profile_name)
     ssm = profile.client('ssm', region_name='us-west-2')
     package = profile.client('mediapackage', region_name='us-west-2')
     ID = event['ID']
+    print(ID)
     # create package endpoint
     package_destination = create_mediapackage(package, ID)
     playable_url = create_package_endpoint(package, ID)

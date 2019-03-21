@@ -151,7 +151,7 @@ def input_sg(client):
     try:
         response = client.list_input_security_groups()['InputSecurityGroups']
         return response[0]['Id']
-    except KeyError:
+    except (KeyError, IndexError):
         response = client.create_input_security_group(
             WhitelistRules=[
                 {"Cidr": "0.0.0.0/0"}

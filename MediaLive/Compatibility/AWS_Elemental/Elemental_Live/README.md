@@ -60,10 +60,12 @@ rtmp://[ip address 1]:1935/[channel id]-1
 rtmp://[ip address 2]:1935/[channel id]-2
 ```
 In the example XML, replace the following values in the rtmp_settings configuration blocks.
-Parameter | Notes
+
+Parameter | Value
 ------------ | -------------
 uri | rtmp://[ip address 1]:1935/[channel id]-1
 uri | rtmp://[ip address 2]:1935/[channel id]-2
+
 Create a new event, load the modified example event XML.  Once the template is loaded, adjust the input values to a valid local or network file location and start the event.
 
 

@@ -64,8 +64,8 @@ def rtmp_push(client, Id, sg):
         Type="RTMP_PUSH",
         InputSecurityGroups=[sg],
         Destinations=[
-            {'StreamName': "%s-1" % Id},
-            {'StreamName': "%s-2" % Id}],
+            {'StreamName': "input1/%s" % Id},
+            {'StreamName': "input2/%s" % Id}],
         Name=Id)
     return response
 

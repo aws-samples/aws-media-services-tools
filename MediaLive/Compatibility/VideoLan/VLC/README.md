@@ -54,8 +54,8 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 ### 4. Configure VLC
 Follow the detailed directions [here](https://d1.awsstatic.com/awselemental/workflowexamples/Workflow5_Example_VLC_RTP_to_MediaLive_and_MediaPackage.pdf) using the inputs the provided by MediaLive below.
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 
 ### Notes

@@ -57,8 +57,8 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 
 Create a streaming profile that uses the following parameters:
@@ -66,7 +66,7 @@ Parameter | Notes
 ------------ | -------------
 Stream Type | RTMP
 RTMP Server URL | rtmp://[ip address 1]:/[channel id]-1
-RTMP Stream Name | HELO
+RTMP Stream Name | input1
 
 
 ### Notes

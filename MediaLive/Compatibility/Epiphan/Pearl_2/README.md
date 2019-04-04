@@ -54,8 +54,8 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 ### 4. Configure the Pearl 2
 The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 Use the provided [pdf directions](./pearl-StreamingGuide-amazon-4-7-1.pdf) to configure the Pearl 2.
 

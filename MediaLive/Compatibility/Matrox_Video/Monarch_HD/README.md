@@ -55,19 +55,19 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 - Matrox Video software [product documentation](https://www.matrox.com/video/en/support/downloads/)
 - Monarch HD [product documentation](https://www.matrox.com/video/en/support/downloads/download/?id=244&product=77&osName=28&productName=monarch_hd&downloadType=Documentation)
 
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 Take the inputs and substitute their values into the streamParam configuration blocks in the [MonarchHD_Settings.xml](./MonarchHD_Settings.xml)
 
 Parameter | Notes
 ------------ | -------------
-rtmpDestinationURL | rtmp://[ip address 1]:1935/hd
-rtmpStreamName | [channel id]-1
-rtmpDestinationURL | rtmp://[ip address 2]:1935/hd2
-rtmpStreamName | [channel id]-2
+rtmpDestinationURL | rtmp://[ip address 1]:1935/input1
+rtmpStreamName | [channel id]
+rtmpDestinationURL | rtmp://[ip address 2]:1935/input2
+rtmpStreamName | [channel id]
 
 
 ### Notes

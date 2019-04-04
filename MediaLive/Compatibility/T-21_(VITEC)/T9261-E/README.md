@@ -55,16 +55,16 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 - T9261-E [product documentation](http://t2b.d4a.myftpupload.com/t9261e/)
 - T9261-E [Manual PDF](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/T-21_Technologies/T9261-E/T9261.pdf)
 
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 Under Endcode Outputs, configure the T9261 with the following values:
 Parameter | Notes
 ------------ | -------------
 Protocol | RTMP (client)
-URL | rtmp://[ip address 1]:1935/[channel id]-1
+URL | rtmp://[ip address 1]:1935/input1/[channel id]
 Video Profile | rtmpDefault
 Audio Profile | rtmpDefault
 

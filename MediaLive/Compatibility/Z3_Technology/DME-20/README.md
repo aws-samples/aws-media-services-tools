@@ -52,10 +52,10 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 
 
 ### 4. Configure the DME-20
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 
 Under the Output Setup section, enter the parameters below [image for reference](./DME-20.png).
@@ -63,7 +63,7 @@ Parameter | Notes
 ------------ | -------------
 Output Format | RTMP
 Aux File Enable | None
-Dest Address | [ip address 1]/dme-20/[channel id]-1
+Dest Address | [ip address 1]/input1/[channel id]
 
 
 ### Notes

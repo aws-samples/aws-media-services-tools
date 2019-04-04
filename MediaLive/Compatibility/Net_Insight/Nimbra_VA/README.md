@@ -54,10 +54,10 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 ### 4. Configure the Nimbra VA
 - Net Insight [product information](https://netinsight.net/products-services/)
 -
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 Configure the Nimbra VA using the provided RTMP inputs.
 

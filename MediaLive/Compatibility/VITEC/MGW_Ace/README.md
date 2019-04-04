@@ -55,20 +55,20 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 - MGW Ace [product documentation](https://www.vitec.com/products/encoders/portable-encoders/product/show/mgw-ace/)
 - MGW Ace [API documentation](./MGW_Ace_Encoder_HTTP_API_v2.1.0.pdf)
 - MGW Ace [product manual](./MGW_ACE_Encoder_User_Manual_v2.1_RevC.pdf)
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 
 Select the channels option on the left side product menu, see [screen capture 1](./MGW_Ace_Encoder_H264_RTMP.jpg) and [screen capture 2](./MGW_Ace_Encoder_HEVC_RTP_FEC.jpg) for reference.  Enter the parameters below in the target 1 and target 2 fields, respectively.
 Parameter | Notes
 ------------ | -------------
-Channel Name | vitec-1
+Channel Name | input1
 Streaming Protocol | RTMP
 Target Address | [ip address 1]
 Target Port | 1935
-Channel Name | vitec-2
+Channel Name | input2
 Streaming Protocol | RTMP
 Target Address | [ip address 2]
 

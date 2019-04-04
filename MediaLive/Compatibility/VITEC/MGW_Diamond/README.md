@@ -55,20 +55,20 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 - MGW Diamond [product documentation](https://www.vitec.com/products/encoders/portable-encoders/product/show/mgw-diamond)
 - MGW Diamond [API documentation](./MGW_Diamond_TOUGH_V1.6_HTTPS_API.pdf)
 - MGW Diamond [product manual](./MGW_Diamond_Encoder_User_Manual_v1.6_RevA.pdf)
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 
 Select the channels option on the left side product menu, and enter the parameters below in the target 1 and target 2 fields, respectively.
 Parameter | Notes
 ------------ | -------------
-Channel Name | vitec-1
+Channel Name | input1/[channdel id]
 Streaming Protocol | RTMP
 Target Address | [ip address 1]
 Target Port | 1935
-Channel Name | vitec-2
+Channel Name | input2/[channdel id]
 Streaming Protocol | RTMP
 Target Address | [ip address 2]
 

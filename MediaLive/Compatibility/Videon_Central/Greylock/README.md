@@ -55,16 +55,16 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 - Greylock [product documentation](https://streaming.videon-central.com/greylock/)
 - Greylock [product manual pdf](./Videon_Greylock_Sonora_Manual_20180824.pdf)
 
-The MediaLive input creation provides two input URLs with the following structure:
+The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 Configure the Greylock using the parameters below:
 Parameter | Notes
 ------------ | -------------
 Protocol | RTMP
-URL | rtmp://[ip address 1]:1935/[channel id]-1
+URL | rtmp://[ip address 1]:1935/input1/[channel id]
 
 
 ### Notes

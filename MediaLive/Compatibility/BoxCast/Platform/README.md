@@ -54,8 +54,8 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 ### 4. Configure the BoxCast Platform
 The MediaLive input creation will provide two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 Use the provided [BoxCast Blog Post](https://boxcast.zendesk.com/hc/en-us/articles/360022974052-How-to-Broadcast-to-AWS-Elemental-MediaLive-via-BoxCast) to configure the BoxCast Platform.
 

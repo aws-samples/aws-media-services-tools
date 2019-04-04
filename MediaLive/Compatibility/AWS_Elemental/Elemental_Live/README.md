@@ -56,15 +56,15 @@ medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 - Example RTMP_PUSH [Live Event XML](https://github.com/aws-samples/aws-media-services-tools/tree/master/MediaLive/Compatibility/Elemental/Live/RTMP_example.xml)
 The MediaLive input creation provides two input URLs with the following structure:
 ```
-rtmp://[ip address 1]:1935/[channel id]-1
-rtmp://[ip address 2]:1935/[channel id]-2
+rtmp://[ip address 1]:1935/input1/[channel id]
+rtmp://[ip address 2]:1935/input2/[channel id]
 ```
 In the example XML, replace the following values in the rtmp_settings configuration blocks.
 
 Parameter | Value
 ------------ | -------------
-uri | rtmp://[ip address 1]:1935/[channel id]-1
-uri | rtmp://[ip address 2]:1935/[channel id]-2
+uri | rtmp://[ip address 1]:1935/input1/[channel id]
+uri | rtmp://[ip address 2]:1935/input2/[channel id]
 
 Create a new event, load the modified example event XML.  Once the template is loaded, adjust the input values to a valid local or network file location and start the event.
 

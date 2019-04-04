@@ -1,9 +1,9 @@
-# RTMP Streaming with the Z3 Technology DME-05 and AWS MediaLive
+# RTMP Streaming with the Grass Valley iTX and AWS MediaLive
 How to connect AWS Elemental Live to an AWS Elemental MediaLive channel using RTMP Push
 1. [Create an AWS Elemental MediaLive Input](#1-create-an-aws-elemental-medialive-input)
 2. [Create an AWS Elemental MediaPackage Channel](#2-create-an-aws-elemental-mediapackage-channel)
 3. [Create the MediaLive Channel](#3-create-the-medialive-channel)
-4. [Configure the DME-05](#4-configure-the-dme-05)
+4. [Configure the iTX](#4-configure-the-itx)
 
 
 ## Detailed Instructions and Examples
@@ -51,18 +51,15 @@ destination_id | the output of the MediaPackage channel creation
 medialive_arn | The ARN for the IAM role that the MediaLive channel will use
 
 
-### 4. Configure the DME-05
+### 4. Configure the iTX
+- [Grass Valley iTX documentation](https://www.grassvalley.com/products/itx/)
+- [iTX product manuals](https://www.grassvalley.com/cgi-bin/doc_jn.pl?set=purple&c=^ITX$&super=broadcast&skin=jumpnav&sort=rev&lang=en#manuals)
 The MediaLive input creation will provide two input URLs with the following structure:
 ```
 rtmp://[ip address 1]:1935/input1/[channel id]
 rtmp://[ip address 2]:1935/input2/[channel id]
 ```
-
-Under the Output Setup section, enter the parameters below [image for reference](./DME-05.png).
-Parameter | Notes
------------- | -------------
-Output Format | RTMP
-Dest Address | [ip address 1]/input1/[channel id]
+Configure the iTX using the provided RTMP inputs.
 
 
 ### Notes

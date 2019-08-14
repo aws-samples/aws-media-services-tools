@@ -1,4 +1,4 @@
-# RTP Streaming with Matrox Monarch EDGE and AWS MediaLive
+# RTMP Streaming with Matrox Monarch EDGE and AWS MediaLive
 
 How to connect Elemental Live to a MediaLive channel using RTMP Push
 

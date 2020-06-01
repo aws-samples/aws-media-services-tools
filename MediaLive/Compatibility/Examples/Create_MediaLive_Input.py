@@ -3,7 +3,7 @@ import boto3
 '''
 How to use:
 Modify the event and profile variable definitions and execute the script
-python3 ./Create_MediaPackage_Channel.py
+python3 ./Create_MediaLive_Input.py
 
 What does it do:
 This script will create a MediaLive Input, one of two prerequisies for
